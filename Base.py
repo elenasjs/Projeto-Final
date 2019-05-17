@@ -31,14 +31,14 @@ class Jogador(pygame.sprite.Sprite):
         self.rect.y = y
 
     def move(self,dado):
-    	if self.rect.y <=10:
-    		self.rect.x += dado*10
-    	if self.rect.x >= 300:
-    		self.rect.y += dado*10
-    	if self.rect.x > 10 and self.rect.y >= 300:
-    		self.rect.x -= dado*10
-    	if self.rect.x <= 10 and self.rect.y > 10:
-    		self.rect.y -= dado*10
+    	if self.rect.y <=20:
+    		self.rect.x += dado*20
+    	if self.rect.x >= 790:
+    		self.rect.y += dado*20
+    	if self.rect.x > 20 and self.rect.y >= 700:
+    		self.rect.x -= dado*20
+    	if self.rect.x <= 20 and self.rect.y > 10:
+    		self.rect.y -= dado*20
 
 
 class Fundo(pygame.sprite.Sprite):
