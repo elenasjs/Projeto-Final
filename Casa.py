@@ -18,7 +18,7 @@ class CasaPropriedade():
 
     def addHouse(self, xy):
         self.quantHouse += 1
-        return House("casa.png",xy)
+        return House("Imagem_Casa.png",xy)
 
     def addBuilding(self):
         if self.quantHouse > 4:

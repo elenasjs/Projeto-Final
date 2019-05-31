@@ -286,7 +286,7 @@ class Jogador(pygame.sprite.Sprite):
 class Fundo(pygame.sprite.Sprite):
 	def __init__(self,x,y):
 		pygame.sprite.Sprite.__init__(self)
-		self.image = pygame.image.load("tabuleiro.png").convert()
+		self.image = pygame.image.load("Imagem_Tabuleiro.png").convert()
 		self.rect = self.image.get_rect()
 		self.rect.x = x
 		self.rect.y = y
@@ -301,7 +301,7 @@ fundo_group.add(fundo)
 lista_Casas = []
 lista_Casas.append(CasaPropriedade(position=0, houseMultiplier=0.2, buildingMultiplier=0.4, houseCost=500, buildingCost=2000, cost=100, color="roxo", name="CEMP", aluguel=200))
 lista_Casas.append(CasaProvas(position=1))
-lista_Casas.append(CasaPropriedade(position=2, houseMultiplier=0.2, buildingMultiplier=0.4, houseCost=500, buildingCost=2000, cost=150, color="roxo", name='MAQUINA DE LANCHES', aluguel=200))
+lista_Casas.append(CasaPropriedade(position=2, houseMultiplier=0.2, buildingMultiplier=0.4, houseCost=500, buildingCost=2000, cost=150, color="roxo", name="MAQUINA DE LANCHES", aluguel=200))
 lista_Casas.append(casaEvento(position=3, name="PROVA SUBSTITURIVA PAGUE R$200", cost=200))
 lista_Casas.append(CasaYellow(position=4, name="YELLOW BIKE", cost=200, aluguel=100))
 lista_Casas.append(CasaPropriedade(position=5, houseMultiplier=0.2, buildingMultiplier=0.4, houseCost=500, buildingCost=2000, cost=150, color="azul claro", name="SALA DAS ENTIDADES", aluguel=200))
@@ -311,33 +311,33 @@ lista_Casas.append(CasaPropriedade(position=8, houseMultiplier=0.2, buildingMult
 lista_Casas.append(CasaDP(position=9))
 lista_Casas.append(CasaPropriedade(position=10, houseMultiplier=0.2, buildingMultiplier=0.4, houseCost=500, buildingCost=2000, cost=400, color="rosa", name="LAB DE CEMP. (4 ANDAR)", aluguel=200))
 lista_Casas.append(CasaParking(position=11, name="PARKING PREDIO 1", cost=150, aluguel=100))
-lista_Casas.append(CasaPropriedade(position=22, houseMultiplier=0.2, buildingMultiplier=0.4, houseCost=500, buildingCost=2000, cost=350, color="rosa", name="LAB. 2 (4 ANDAR) R$300", aluguel=200))
-lista_Casas.append(CasaPropriedade(position=13, houseMultiplier=0.2, buildingMultiplier=0.4, houseCost=500, buildingCost=2000, cost=350, color="rosa", name="LAB. 2 (4 ANDAR) R$300", aluguel=200))
+lista_Casas.append(CasaPropriedade(position=22, houseMultiplier=0.2, buildingMultiplier=0.4, houseCost=500, buildingCost=2000, cost=350, color="rosa", name="LAB. 2 (4 ANDAR)", aluguel=200))
+lista_Casas.append(CasaPropriedade(position=13, houseMultiplier=0.2, buildingMultiplier=0.4, houseCost=500, buildingCost=2000, cost=350, color="rosa", name="LAB. 2 (4 ANDAR)", aluguel=200))
 lista_Casas.append(CasaYellow(position=14, name="GRIN PATINETE", cost=400, aluguel=100))
 lista_Casas.append(CasaPropriedade(position=15, houseMultiplier=0.2, buildingMultiplier=0.4, houseCost=500, buildingCost=2000, cost=700, color="laranja", name="SALAS DE AULAS PREDIO 2", aluguel=200))
 lista_Casas.append(CasaProvas(position=16))
 lista_Casas.append(CasaPropriedade(position=17, houseMultiplier=0.2, buildingMultiplier=0.4, houseCost=500, buildingCost=2000, cost=450, color="laranja", name="SALAS DE AULAS PREDIO 1", aluguel=200))
-lista_Casas.append(CasaPropriedade(position=18, houseMultiplier=0.2, buildingMultiplier=0.4, houseCost=500, buildingCost=2000, cost=300, color="laranja", name="AFFARI CAFE R$300", aluguel=200))
+lista_Casas.append(CasaPropriedade(position=18, houseMultiplier=0.2, buildingMultiplier=0.4, houseCost=500, buildingCost=2000, cost=300, color="laranja", name="AFFARI CAFE", aluguel=200))
 lista_Casas.append(CasaVoid(position=19, name="KZA CAFE FREE COFFE"))
-lista_Casas.append(CasaPropriedade(position=20, houseMultiplier=0.2, buildingMultiplier=0.4, houseCost=500, buildingCost=2000, cost=400, color='red', name="LAB.TERMO", aluguel=200))
+lista_Casas.append(CasaPropriedade(position=20, houseMultiplier=0.2, buildingMultiplier=0.4, houseCost=500, buildingCost=2000, cost=400, color="red", name="LAB.TERMO", aluguel=200))
 lista_Casas.append(CasaAPS(position=21))
-lista_Casas.append(CasaPropriedade(position=22, houseMultiplier=0.2, buildingMultiplier=0.4, houseCost=500, buildingCost=2000, cost=450, color='red', name="AUDITORIO", aluguel=200))
-lista_Casas.append(CasaPropriedade(position=23, houseMultiplier=0.2, buildingMultiplier=0.4, houseCost=500, buildingCost=2000, cost=9999999, color='red', name="LAB DE CONTROLE E AUTOMAÇÃO (SUB. 1)", aluguel=200))
-lista_Casas.append(CasaYellow(position=24, name='YELLOW E-BIKE', cost=550, aluguel=100))
-lista_Casas.append(CasaPropriedade(position=25, houseMultiplier=0.2, buildingMultiplier=0.4, houseCost=500, buildingCost=2000, cost=180, color='yellow', name="HELP DESK", aluguel=200))
-lista_Casas.append(CasaPropriedade(position=26, houseMultiplier=0.2, buildingMultiplier=0.4, houseCost=500, buildingCost=2000, cost=400, color='yellow', name="BIBLIOTECA", aluguel=200))
+lista_Casas.append(CasaPropriedade(position=22, houseMultiplier=0.2, buildingMultiplier=0.4, houseCost=500, buildingCost=2000, cost=450, color="red", name="AUDITORIO", aluguel=200))
+lista_Casas.append(CasaPropriedade(position=23, houseMultiplier=0.2, buildingMultiplier=0.4, houseCost=500, buildingCost=2000, cost=350, color="red", name="LAB DE CONTROLE E AUTOMAÇÃO (SUB. 1)", aluguel=200))
+lista_Casas.append(CasaYellow(position=24, name="YELLOW E-BIKE", cost=550, aluguel=100))
+lista_Casas.append(CasaPropriedade(position=25, houseMultiplier=0.2, buildingMultiplier=0.4, houseCost=500, buildingCost=2000, cost=180, color="yellow", name="HELP DESK", aluguel=200))
+lista_Casas.append(CasaPropriedade(position=26, houseMultiplier=0.2, buildingMultiplier=0.4, houseCost=500, buildingCost=2000, cost=400, color="yellow", name="BIBLIOTECA", aluguel=200))
 lista_Casas.append(CasaParking(position=27, name="PARKING PREDIO 2", cost=150, aluguel=100))
-lista_Casas.append(CasaPropriedade(position=28, houseMultiplier=0.2, buildingMultiplier=0.4, houseCost=500, buildingCost=2000, cost=230, color='yellow', name="CASA DO PAO DE QUEIJO", aluguel=200))
+lista_Casas.append(CasaPropriedade(position=28, houseMultiplier=0.2, buildingMultiplier=0.4, houseCost=500, buildingCost=2000, cost=230, color="yellow", name="CASA DO PAO DE QUEIJO", aluguel=200))
 lista_Casas.append(CasaGoToDP(position=29, name="VOCÊ FICOU DE DP"))
-lista_Casas.append(CasaPropriedade(position=30, houseMultiplier=0.2, buildingMultiplier=0.4, houseCost=500, buildingCost=2000, cost=400, color='green', name="PROFESSORES", aluguel=200))
-lista_Casas.append(CasaPropriedade(position=31, houseMultiplier=0.2, buildingMultiplier=0.4, houseCost=500, buildingCost=2000, cost=250, color='green', name='QUADRA PREDIO 1', aluguel=200))
+lista_Casas.append(CasaPropriedade(position=30, houseMultiplier=0.2, buildingMultiplier=0.4, houseCost=500, buildingCost=2000, cost=400, color="green", name="PROFESSORES", aluguel=200))
+lista_Casas.append(CasaPropriedade(position=31, houseMultiplier=0.2, buildingMultiplier=0.4, houseCost=500, buildingCost=2000, cost=250, color="green", name="QUADRA PREDIO 1", aluguel=200))
 lista_Casas.append(CasaProvas(position=32))
-lista_Casas.append(CasaPropriedade(position=33, houseMultiplier=0.2, buildingMultiplier=0.4, houseCost=500, buildingCost=2000, cost=500, color='green', name="LAB DE R.V.", aluguel=200))
-lista_Casas.append(CasaYellow(position=34, name='YELLOW PATINETE', cost=400, aluguel=100))
+lista_Casas.append(CasaPropriedade(position=33, houseMultiplier=0.2, buildingMultiplier=0.4, houseCost=500, buildingCost=2000, cost=500, color="green", name="LAB DE R.V.", aluguel=200))
+lista_Casas.append(CasaYellow(position=34, name="YELLOW PATINETE", cost=400, aluguel=100))
 lista_Casas.append(CasaAPS(position=35))
 lista_Casas.append(CasaPropriedade(position=36, houseMultiplier=0.2, buildingMultiplier=0.4, houseCost=500, buildingCost=2000, cost=800, color="blue", name="FABLAB", aluguel=200))
-lista_Casas.append(casaEvento(position=37, name='MENSALIDADE PAGUE', cost=200))
-lista_Casas.append(CasaPropriedade(position=38, houseMultiplier=0.2, buildingMultiplier=0.4, houseCost=500, buildingCost=2000, cost=1000, color='blue', name="TECHLAB", aluguel=200))
+lista_Casas.append(casaEvento(position=37, name="MENSALIDADE PAGUE", cost=200))
+lista_Casas.append(CasaPropriedade(position=38, houseMultiplier=0.2, buildingMultiplier=0.4, houseCost=500, buildingCost=2000, cost=1000, color="blue", name="TECHLAB", aluguel=200))
 lista_Casas.append(CasaPicPay(position=39))
 
 dado1 = None
@@ -436,19 +436,19 @@ lineY = height/jogando
 
 if jogando >= 1:
     name1 = "Player 1"
-    player_1 = Jogador("imagem_peao.png",2000-170,800-25, name=name1, number=1)
+    player_1 = Jogador("Imagem_Peao_1.png",2000-170,800-25, name=name1, number=1)
     player_group.add(player_1)
 if jogando >= 2:
     name2 = "Player 2"
-    player_2 = Jogador("imagem_peao2.png",2000-170,800-50, name=name2, number=2)
+    player_2 = Jogador("Imagem_Peao_2.png",2000-170,800-50, name=name2, number=2)
     player_group.add(player_2)
 if jogando >= 3:
     name3 = "Player 3"
-    player_3 = Jogador("imagem_peao3.png",2000-170,800-75, name=name3, number=3)
+    player_3 = Jogador("Imagem_Peao_3.png",2000-170,800-75, name=name3, number=3)
     player_group.add(player_3)
 if jogando >= 4:
     name4 = "Player 4"
-    player_4 = Jogador("imagem_peao4.png",2000-170,800-100, name=name4, number=4)
+    player_4 = Jogador("Imagem_Peao_4.png",2000-170,800-100, name=name4, number=4)
     player_group.add(player_4)
 
 
