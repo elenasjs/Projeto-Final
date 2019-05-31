@@ -343,6 +343,60 @@ lista_Casas.append(CasaPicPay(position=39))
 dado1 = None
 dado2 = None
 
+APSdict = {}
+provaDict = {}
+for e in range(6):
+    APSdict[e] = {}
+    provaDict[e] = {}
+    provaDict[e]["texto"] = "texto generico"
+    provaDict[e]["tipo"] = "nenhum"
+
+APSdict[0]["texto"] = "Parabens, a sua APS foi tao boa que você ganhou 300R$"
+APSdict[0]["money"] = 300
+APSdict[0]["tipo"] = "money"
+
+APSdict[1]["texto"] = "Ops, a sua APS foi tao ruim que você perdeu 200R$"
+APSdict[1]["money"] = -200
+APSdict[1]["tipo"] = "money"
+
+APSdict[2]["texto"] = "Sem querer olhou o git do amigo e copiou tudo, DP..."
+APSdict[2]["tipo"] = "dp"
+
+APSdict[3]["texto"] = "Ops, a sua APS foi tao ruim que você perdeu 200R$"
+APSdict[3]["money"] = -400
+APSdict[3]["tipo"] = "money"
+
+APSdict[4]["texto"] = "Mano, sua APS foi tão boa agora você né o novo professor"
+APSdict[4]["money"] = 300
+APSdict[4]["tipo"] = "money"
+
+APSdict[5]["texto"] = "O nerdao da sala ta no seu grupo da APS, com isso tu sai da dp facilmente"
+APSdict[5]["tipo"] = "freePass"
+
+provaDict[0]["texto"] = "Pra estudar pras pf tu gastou 500 conto em redbull"
+provaDict[0]["tipo"] = "money"
+provaDict[0]["money"] = -500
+
+provaDict[1]["texto"] = "As pf tao ai e tu n sabe nada, pague R$200 um veterano pra te ajudar"
+provaDict[1]["tipo"] = "money"
+provaDict[1]["money"] = -200
+
+provaDict[2]["texto"] = "As pf tao ai e tu n sabe nada, pague R$200 um veterano pra te ajudar"
+provaDict[2]["tipo"] = "money"
+provaDict[2]["money"] = -200
+
+provaDict[3]["texto"] = "Não te pegaram colando na prova de instrumed"
+provaDict[3]["tipo"] = "money"
+provaDict[3]["money"] = 300
+
+provaDict[4]["texto"] = "Te pegaram colando na prova de instrumed, DP..."
+provaDict[4]["tipo"] = "dp"
+
+provaDict[5]["texto"] = "Tu tirou 4.95, mas fez amizade com o prof arredondou sua nota te tirando da DP"
+provaDict[5]["tipo"] = "freePass"
+
+casaPropriedades = ["<class 'Casa.CasaPropriedade'>", "<class 'Casa.CasaYellow'>", "<class 'Casa.CasaParking'>"]
+
 
 menuPlayersQuant = True
 while menuPlayersQuant:
