@@ -7,6 +7,7 @@ from Casa import *
 os.environ['SDL_VIDEO_CENTERED'] = '1'
 
 pygame.init()
+pygame.mixer.init()
 definicao = width, height = 1300, 800
 tela = pygame.display.set_mode(definicao)
 relogio =pygame.time.Clock()
@@ -249,6 +250,9 @@ class Jogador(pygame.sprite.Sprite):
     def move(self,dado1, dado2):
         if not self.inDP:
             for e in range(dado1+dado2):
+                sound = pygame.mixer.Sound('audio_movimento.ogg')
+                pygame.mixer.Sound.set_volume(sound,0.3)
+                pygame.mixer.Sound.play(sound)
                 try:
                     self.position += 1
                     self.rect.center = self.movs[self.position]
@@ -424,7 +428,7 @@ while menuPlayersQuant:
 
 
     tela.fill(branco)
-    Escreve("InsperPoly",80,arial,preto,width/2,50)
+    Escreve("MonoInsper",80,arial,preto,width/2,50)
     Escreve("Quantidade de players: 2 - 4",40 ,arial, preto, width/2, 200)
     pygame.display.update()
     pygame.display.flip()
@@ -467,7 +471,7 @@ while full:
                     menu = False
 
         tela.fill(branco)
-        Escreve("InsperPoly",80,arial,preto,width/2,50)
+        Escreve("MonoInsper",80,arial,preto,width/2,50)
 
         Escreve("Regras: ",40,arial,preto,width/2-300,200)
         Escreve("- Espaço: lança os dados",40,arial,preto,width/2-100,250)
@@ -488,12 +492,21 @@ while full:
             if event.type == pygame.QUIT:
                 pygame.quit()
             if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_f:
+                    player_1.faliu = True
                 if event.key == pygame.K_ESCAPE:
                     pygame.quit()
                 if event.key == pygame.K_p:
                     inGame = False
                     menu = True
                 if event.key == pygame.K_SPACE:
+                    sound = pygame.mixer.Sound('Audio_Dados.ogg')
+                    pygame.mixer.Sound.set_volume(sound,0.3)
+                    pygame.mixer.Sound.play(sound)
+                    start_time = time.time()
+                    elapsed_time = 0
+                    while elapsed_time < 2:
+                        elapsed_time = time.time() - start_time
                     dado1 = np.random.randint(1,7)
                     dado2 = np.random.randint(1,7)
                     for player in player_group:
@@ -516,6 +529,7 @@ while full:
                         n = 0
         casa =  None
         if len(player_group) <= 1:
+            print("end game")
             inGame = False
             endGame = True
             full = False
@@ -546,7 +560,7 @@ while endGame:
                 endGame = False
 
     tela.fill(branco)
-    Escreve("InsperPoly",80,arial,preto,width/2,50)
+    Escreve("MonoInsper",80,arial,preto,width/2,50)
     Escreve("O vencedor foi {0}".format(vencedor.name),40,arial,preto,width/2,height/2)
     Escreve("Espaço para terminar",40,arial,preto,width/2,height/2+300)
 

@@ -92,7 +92,7 @@ class CasaYellow():
         self.color = "yellow"
 
     def getAluguel(self):
-        if monopoly:
+        if self.monopoly:
             return self.aluguel*2
         return self.aluguel
 
@@ -118,4 +118,7 @@ class House(pygame.sprite.Sprite):
         self.image = pygame.image.load(imagem).convert_alpha()
         self.image = pygame.transform.scale(self.image,(25,25))
         self.rect = self.image.get_rect()
-        self.rect.center = xy + (20,20)
+        self.rect.center = xy
+        self.rect.centerx += 20
+        self.rect.centery += 20
+
